@@ -1,0 +1,9 @@
+. {
+    forward . {$FWD_DNS_PRIMARY} {$FWD_DNS_SECONDARY}
+    log
+    prometheus {$PROM_BIND}:{$PROM_PORT}
+}
+
+local {
+    mdns local
+}
